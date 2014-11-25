@@ -1,0 +1,28 @@
+{
+  "name": "subnetterjs",
+  "version": "0.0.2",
+  "homepage": "https://github.com/tylerdmace/subnetterjs",
+  "authors": [
+    "Tyler Mace <tylerdmace@gmail.com>"
+  ],
+  "description": "A library for performing IP addressing calculations",
+  "main": "subnetter.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "IP",
+    "IPv4",
+    "IPv6",
+    "Subnets",
+    "Calculator"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
