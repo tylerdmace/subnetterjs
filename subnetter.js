@@ -40,6 +40,13 @@ function getBroadcast(address, netmask) {
   return broadcast.join('.');
 }
 
+function getFirstUsable(address, netmask) {
+  var network = getNetwork(address, netmask).split('.');
+  network[3] = Number(network[3] + 1);
+
+  return network.join('.');
+}
+
 function getHost(address, netmask) {
   var address = addressToBinary(address);
   var netmask = addressToBinary(netmask);
@@ -50,6 +57,13 @@ function getHost(address, netmask) {
   }
 
   return host.join('.');
+}
+
+function getLastUsable(address, netmask) {
+  var broadcast = getBroadcast(address, netmask).split('.');
+  broadcast[3] = Number(broadcast[3] - 1);
+
+  return broadcast.join('.');
 }
 
 function getNetwork(address, netmask) {
@@ -101,7 +115,6 @@ function octetToDecimal(octet) {
   }
 
   return bitValue;
-
 }
 
 function xorOctets(octetOne, octetTwo) {
