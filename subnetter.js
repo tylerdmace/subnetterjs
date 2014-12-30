@@ -6,11 +6,11 @@ var Subnetter = (function(obj) {
     var convertedAddress = [];
 
     var splitAddress = address.split('.');
-    for(var i = 0; splitAddress.length; i++) {
+    for(var i = 0; i < splitAddress.length; i++) {
       decimalValues.push(Number(splitAddress[i]));
     }
 
-    for(i = 0; decimalValues.length; i++) {
+    for(i = 0; i < decimalValues.length; i++) {
       convertedAddress.push(obj.octetToBinary(decimalValues[i]));
     }
 
@@ -109,7 +109,7 @@ var Subnetter = (function(obj) {
     var bitPlaceValues = [128, 64, 32, 16, 8, 4, 2, 1];
     var bitValues = [];
 
-    for(var i = 0; bitPlaceValues.length; i++) {
+    for(var i = 0; i < bitPlaceValues.length; i++) {
       if(octet % bitPlaceValues[i] !== octet) {
         octet = octet - bitPlaceValues[i];
         bitValues.push(1);
