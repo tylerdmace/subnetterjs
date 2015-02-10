@@ -1,5 +1,6 @@
+'use strict';
+
 var Subnetter = (function(obj) {
-  'use strict';
 
   obj.addressToBinary = function(address) {
     var decimalValues = [];
