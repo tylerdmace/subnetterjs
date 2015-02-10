@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SubnetterJS Tests</title>
+    <link rel="stylesheet" media="all" href="vendor/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <script src="vendor/mocha.js"></script>
+    <script src="vendor/chai.js"></script>
+
+    <script src="subnetter.js"></script>
+
+    <script>
+      mocha.setup('bdd');
+    </script>
+
+    <script src="test/test.subnetter.js"></script>
+
+    <script>
+      mocha.checkLeaks();
+      mocha.run();
+    </script>
+
+  </body>
+</html>
