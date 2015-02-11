@@ -134,7 +134,7 @@ var Subnetter = (function(obj) {
   };
 
   obj.xorOctets = function(octetOne, octetTwo) {
-    var convertedOctet = [];
+	var convertedOctet = [];
 
     for(var bit = 0; bit < 8; bit++) {
       if(octetOne.charAt(bit) ^ octetTwo.charAt(bit)) {
@@ -143,6 +143,20 @@ var Subnetter = (function(obj) {
     }
 
     return convertedOctet.join('');
+  };
+  
+  obj.checkIPInSubnet = function(address, subnet_id, netmask){
+	var addr = obj.addressToDecimal(address);
+	var sub  = obj.addressToDecimal(subnet_id);
+	var mask = obj.addressToDecimal(netmask);
+	
+	if ((addr & mask) === sub){
+		return 1;
+	}
+	else{
+		return 0;
+	}
+		
   };
 
   return obj;
