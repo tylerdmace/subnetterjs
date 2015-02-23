@@ -1,0 +1,28 @@
+{
+  "name": "subnetterjs",
+  "version": "0.0.10",
+  "description": "SubnetterJS is a library for performing IP addressing calculations.",
+  "main": "subnetter.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tylerdmace/subnetterjs"
+  },
+  "keywords": [
+    "IP",
+    "IPv4",
+    "IPv6",
+    "Subnet",
+    "Calculator"
+  ],
+  "author": "Tyler Mace",
+  "bugs": {
+    "url": "https://github.com/tylerdmace/subnetterjs/issues"
+  },
+  "homepage": "https://github.com/tylerdmace/subnetterjs"
+}
