@@ -1,6 +1,6 @@
 {
   "name": "subnetterjs",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "SubnetterJS is a library for performing IP addressing calculations.",
   "main": "subnetter.js",
   "directories": {
