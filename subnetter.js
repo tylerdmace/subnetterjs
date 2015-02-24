@@ -22,7 +22,7 @@
     return convertedAddress;
   };
 
-  addressToDecimal = function(address) {
+  Subnetter.addressToDecimal = function(address) {
     var joinedAddress = Subnetter.addressToBinary(address).join('');
     var bitPlaceValues = [2147483648, 1073741824, 536870912, 268435456, 134217728, 67108864, 33554432, 16777216, 8388608, 4194304, 2097152, 1048576, 524288, 262144, 131072, 65536, 32768, 16384, 8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1];
     var bitValue = 0;
@@ -36,7 +36,7 @@
     return bitValue;
   };
 
-  andOctets = function(octetOne, octetTwo){
+  Subnetter.andOctets = function(octetOne, octetTwo){
     var convertedOctet = [];
 
     for(var bit = 0; bit < 8; bit++) {
@@ -48,7 +48,7 @@
     return convertedOctet.join('');
   };
 
-  getBroadcast = function(address, netmask) {
+  Subnetter.getBroadcast = function(address, netmask) {
     var network = Subnetter.addressToBinary(Subnetter.getNetwork(address, netmask));
     var binaryNetmask = Subnetter.addressToBinary(netmask);
     var broadcast = [];
@@ -67,7 +67,7 @@
     return network.join('.');
   };
 
-  getHost = function(address, netmask) {
+  Subnetter.getHost = function(address, netmask) {
     var binaryAddress = Subnetter.addressToBinary(address);
     var binaryNetmask = Subnetter.addressToBinary(netmask);
     var host = [];
@@ -79,7 +79,7 @@
     return host.join('.');
   };
 
-  getLastUsable = function(address, netmask) {
+  Subnetter.getLastUsable = function(address, netmask) {
     var broadcast = Subnetter.getBroadcast(address, netmask).split('.');
     broadcast[3] = Number(broadcast[3] - 1);
 
