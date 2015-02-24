@@ -60,7 +60,7 @@
     return broadcast.join('.');
   };
 
-  getFirstUsable = function(address, netmask) {
+  Subnetter.getFirstUsable = function(address, netmask) {
     var network = Subnetter.getNetwork(address, netmask).split('.');
     network[3] = Number(network[3] + 1);
 
