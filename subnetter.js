@@ -154,7 +154,7 @@
     var sub  = Subnetter.addressToDecimal(subnet_id);
     var mask = Subnetter.addressToDecimal(netmask);
 
-    if ((addr & mask) === sub){
+    if (((addr & mask) >>> 0) === sub){
       return 1;
     }
     else{

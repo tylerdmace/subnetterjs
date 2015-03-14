@@ -41,4 +41,10 @@ describe('SubnetterJS', function() {
     expect(Subnetter.getNetwork('192.168.1.0', '255.255.255.0')).to.equal('192.168.1.0');
   });
 
+  it('can check if an IP is part of a subnet', function() {
+    expect(Subnetter.checkIPInSubnet('192.168.1.1', '192.168.1.0', '255.255.255.0'), 1);
+    expect(Subnetter.checkIPInSubnet('192.168.204.201', '192.168.204.0', '255.255.255.0'), 1);
+    expect(Subnetter.checkIPInSubnet('192.168.203.100', '192.168.204.0', '255.255.255.0') ,0);
+  })
+
 });
